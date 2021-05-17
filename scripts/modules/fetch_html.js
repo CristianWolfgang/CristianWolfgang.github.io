@@ -6,8 +6,7 @@ fetchHTML = url =>{
 		return res.text();
 	})
 	.then(HTMLCode=>{
-		document.body.innerHTML = HTMLCode;
-		d.querySelector(".footer__p").textContent += ` - ${new Date().getFullYear()}`;
-	})
+		document.querySelector(".content").innerHTML =HTMLCode;
+	});
 }
 export default fetchHTML;

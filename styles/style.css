@@ -16,7 +16,7 @@ body{
 
 header{
 	text-align: center;
-	padding:1em 0;
+	padding:1em 2em;
 	position: fixed; 
 	left: 5vw;
 }
@@ -31,7 +31,7 @@ header{
 	margin-left: .5em;
 }
 .image-n-name{
-	background-image: url(./../img/IMG_20201012_172316_3.jpg);
+	background-image: url(./../assets/img/IMG_20201012_172316_3.jpg);
 	width: 20em;
 	height: 20em;
 	border-radius: 50%;
@@ -83,14 +83,38 @@ main{
 	color:green;
 	font-size: 200%;
 }
+
+.portfolio{
+	text-align: center;
+}
+.portfolio-img{
+	width: 49%;
+}
+.zoomed-img{
+    position: fixed;
+    left: 0;
+    width: 98%;
+    height: 100vh;
+    margin: 0 1%;
+    top: 0;
+    left: 0;
+    background-color: var(--body-bg-color);
+    z-index: 1;
+    transition: 1s linear;
+}
+.github-link{
+	word-break: break-word;
+	font-style: italic;
+}
+
 footer{
 	background-color: black;
-}
-.footer__p{
+
 	color:white;
 	padding: .5em 0;
 	font-size: 120%;
 	text-align: center;
+
 }
 
 
@@ -138,9 +162,13 @@ footer{
 	#btn-lang{
 		font-size: 1em;
 	}
-	.footer__p{
+	footer{
 		font-size: 150%;
 	}
+	.portfolio-img{
+		width: 30%;
+	}
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -172,7 +200,7 @@ footer{
 	#btn-lang{
 		font-size: 1em;
 	}
-	.footer__p{
+	footer{
 		font-size: 120%;
 	}
 }
@@ -196,12 +224,15 @@ footer{
 		line-height: 1.5em;
 	}
 	footer{
-		margin-top: 12em;
-	}
-	.footer__p{
+		margin-top: 1em;
+
 		font-size: 200%;
 	}
 	.cv{
 		font-size: 150%;
+	}
+	.portfolio-img {
+    	width: 20%;
+    	margin-left: 2%;
 	}
 }

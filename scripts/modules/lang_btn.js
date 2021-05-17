@@ -1,21 +1,14 @@
-import fetchHTML from "./fetch_html.js";
+import selectLang from "./select_lang.js";
 const d = document,
 ls = localStorage,
 langBtn = ()=>{
 	d.addEventListener("click",e=>{
 		if(e.target.matches("#btn-lang")){
-			switch(ls.getItem("lang")){
-				case "ES":
-					ls.setItem("lang","EN");
-					d.documentElement.lang = "en";
-					fetchHTML("./assets/content-en.html");
-				break;
-				case "EN":
-					ls.setItem("lang", "ES");
-					d.documentElement.lang = "en";
-					fetchHTML("./assets/content-es.html");
-			}
+			(ls.getItem("lang")==="EN")?ls.setItem("lang","ES"):ls.setItem("lang","EN");
+			selectLang(ls.getItem("lang"));
+			e.target.textContent = ls.getItem("lang");
 		}
 	})
-}
+};
+
 export default langBtn;
